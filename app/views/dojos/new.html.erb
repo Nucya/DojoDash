@@ -1,0 +1,37 @@
+<style type="text/css">
+
+label {
+width: 10px;
+float: left;
+text-align: right;
+margin-right: 50px;
+}
+
+.submit{
+  margin-left: 60px;
+  margin-top: 10px;
+}
+</style>
+
+<div class="wrapper">
+<h2>Submit a new Dojo!</h2>
+
+<form action='/dojos' method='post'>
+
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="branch">Branch</label>
+  <input type="text" name="branch" value="">
+    <br>
+  <label for="street">Street</label>
+  <input type="text" name="street" value="">
+    <br>
+  <label for="city">City</label>
+  <input type="text" name="city" value="">
+    <br>
+  <label for="state">State</label>
+  <input type="text" name="state" value="">
+    <br>
+  <input class="submit" type="submit" name="" value="Create">
+</form>
+<a href="/">Go Back</a>
+</div>

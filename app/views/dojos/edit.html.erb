@@ -1,0 +1,36 @@
+<style type="text/css">
+
+label {
+width: 10px;
+float: left;
+text-align: right;
+margin-right: 50px;
+}
+
+.submit{
+  margin-left: 60px;
+  margin-top: 10px;
+}
+</style>
+
+<h4>Edit a Dojo</h4>
+
+<form class="" action="/<%= @dojo.id %>/update" method="POST">
+  <input name="_method" type="hidden" value="patch" />
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="branch">Branch</label>
+  <input type="text" name="branch" value="<%= @dojo.branch %>">
+    <br>
+  <label for="street">Street</label>
+  <input type="text" name="street" value="<%= @dojo.street %>">
+    <br>
+  <label for="city">City</label>
+  <input type="text" name="city" value="<%= @dojo.city %>">
+    <br>
+  <label for="state">State</label>
+  <input type="text" name="state" value="<%= @dojo.state %>">
+    <br>
+  <input class="submit" type="submit" name="" value="Update">
+</form>
+<a href="/">Go Back</a>
+</div>
